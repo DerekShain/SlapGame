@@ -29,7 +29,7 @@ function slap(){
     document.getElementById('healthBar').innerText = 'K.O'
     document.getElementById("start-controls").classList.add("hidden")
     document.getElementById("end-controls").classList.remove("hidden")
-
+    document.querySelectorAll('div').forEach(d => d.classList.add('shake'))
 } 
 }
 
@@ -42,6 +42,7 @@ function punch(){
         document.getElementById('healthBar').innerText = 'K.O'
         document.getElementById("start-controls").classList.add("hidden")
         document.getElementById("end-controls").classList.remove("hidden")
+        document.querySelectorAll('div').forEach(d => d.classList.add('shake'))
     } 
 }
 
@@ -55,6 +56,7 @@ function kick(){
         document.getElementById('healthBar').innerText = 'K.O';
         document.getElementById("start-controls").classList.add("hidden")
         document.getElementById("end-controls").classList.remove("hidden")
+        document.querySelectorAll('div').forEach(d => d.classList.add('shake'))
     } 
 }
 
@@ -91,4 +93,3 @@ function krool(){
     document.getElementById("start-controls").classList.remove("hidden")
 document.getElementById("start-button").classList.add("hidden")
 }
-
