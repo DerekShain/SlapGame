@@ -1,12 +1,77 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	<link rel="stylesheet" href="./assets/style/game.css">
 </head>
 <body>
-	
-	<script src=""></script>
+	<header>
+<div class="container-flex">
+	<div class="row bg-dark text-light text-center p-3">
+		<div class="col-4">
+			<h3>Slap Fight!</h3>
+		</div>
+		<div class="col-4">
+			<h3>Health <span id="healthBar">Full</span></h3>
+		</div>
+		<div class="col-4">
+			<h3> Hit Count <span id="hitCount"></span></h3>
+		</div>
+	</div>
+</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row p-3">
+				<div class="col-4">
+					<img src="https://ssb.wiki.gallery/images/thumb/6/68/Wario_Pose_WarioWareGold.png/800px-Wario_Pose_WarioWareGold.png" class="badguy shake" alt="" onclick ="wario()" id="wario-control">	
+				</div>
+				<div class="col-4 ">
+					<img src="https://ssb.wiki.gallery/images/thumb/b/b9/WaluigiSMP2.png/800px-WaluigiSMP2.png" class="badguy shake" alt="" onclick="waluigi()" id="waluigi-control">	
+				</div>
+				<div class="col-4" >
+					<img src="https://ssb.wiki.gallery/images/thumb/b/b6/King_K._Rool_SSBU.png/800px-King_K._Rool_SSBU.png" class="badguy shake" alt="" onclick ="krool()" id="krool-control">	
+				</div>
+			</div>
+
+			<!-- <div class="row" id="Char">
+				<div class="col"></div>
+			</div> -->
+<!-- 
+			<div class="row">
+				<button type="button" class="btn btn-dark start" onclick="start()" id="start-button">Start</button>
+			</div> -->
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+<div class="row hidden p-3" id="start-controls">
+	<div class="col-4">
+		<button type ="button" class="btn btn-dark slap" onclick="slap()" >Slap</button>
+	</div>
+	<div class="col-4">
+		<button type ="button" class="btn btn-dark punch" onclick="punch()" >Punch</button>
+	</div>
+	<div class="col-4">
+		<button type ="button" class="btn btn-dark kick" onclick="kick()" >kick</button>
+	</div>
+</div>
+<div class="row hidden" id="end-controls">
+	<div class="col">
+		<button type="button" class="btn btn-dark reset" onclick="reset()">Reset</button>
+	</div>
+</div>
+		</div>
+	</footer>
+
+
+
+	<script src="./assets/game.js"></script>
 </body>
 </html>
